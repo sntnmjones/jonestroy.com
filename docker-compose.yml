@@ -1,0 +1,11 @@
+version: '3'
+services:
+  react:
+    image: node:alpine
+    restart: always
+    ports:
+      - '2999:3000'
+    working_dir: /react
+    volumes:
+      - ./app:/react
+    command: npm start
