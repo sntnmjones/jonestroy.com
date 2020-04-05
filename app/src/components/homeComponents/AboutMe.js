@@ -6,16 +6,15 @@ class AboutMe extends Component {
     constructor() {
         super();
         this.state = {};
-        var content = 'Test';
     }
 
-    content = 'Test';
 
     render() {
+        const content = 'Test';
         return (
             <div>
                 <Banner title='About Me' />
-                <Content content/>
+                <Content content={content}/>
             </div>
         );
     }
