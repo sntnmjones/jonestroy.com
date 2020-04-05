@@ -8,11 +8,15 @@ class Content extends Component {
     }
 
     render() {
+        const collabsables = [];
+
+        for (const [index, value] of this.props.content.entries()) {
+            collabsables.push(<Collapsable item={value} />)
+        }
+
         return (
             <div>
-                <Collapsable item={this.props.content[0]} />
-                <Collapsable item={this.props.content[1]} />
-                <Collapsable item={this.props.content[2]} />
+                {collabsables}
             </div>
         );
     }
