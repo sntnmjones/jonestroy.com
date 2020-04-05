@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
-import AboutMe from './subcomponents/AboutMe'
+import AboutMe from './homeComponents/AboutMe'
 
 class Home extends Component {
     constructor() {
@@ -14,9 +14,7 @@ class Home extends Component {
                 <Navbar />
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-md'></div>
                         <div className='col-md'><AboutMe /></div>
-                        <div className='col-md'></div>
                     </div>
                 </div>
             </div>
