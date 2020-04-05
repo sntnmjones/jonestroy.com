@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
-import AboutMe from './homeComponents/AboutMe'
+import Card from './homeComponents/Card'
 
 class Home extends Component {
     constructor() {
@@ -9,16 +9,44 @@ class Home extends Component {
     }
 
     render() {
-        return (
-            <div>
-                <Navbar />
-                <div className='container'>
-                    <div className='row'>
-                        <div className='col-md'><AboutMe /></div>
-                    </div>
+        /**
+         * About Me card
+         */
+        const cards = {
+            AboutMe: {
+                title: 'About Me',
+                items: [
+                    {
+                        title: 'Hobbies',
+                        content: 'Cool Hobbies',
+                        collapse: 'collapse show'
+                    },
+                    {
+                        title: 'Education',
+                        content: 'Too much school',
+                        collapse: 'collapse'
+                    },
+                    {
+                        title: 'Code',
+                        content: 'Too much code',
+                        collapse: 'collapse'
+                    }
+                ]
+            }
+        };
+
+return (
+    <div>
+        <Navbar />
+        <div className='container'>
+            <div className='row'>
+                <div className='col-md'>
+                    <Card content={cards.AboutMe} />
                 </div>
             </div>
-        );
+        </div>
+    </div>
+);
     }
 }
 

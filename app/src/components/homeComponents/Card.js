@@ -2,22 +2,20 @@ import React, { Component } from 'react'
 import Banner from './Banner';
 import Content from './Content'
 
-class AboutMe extends Component {
+class Card extends Component {
     constructor() {
         super();
         this.state = {};
     }
 
-
     render() {
-        const content = 'Test';
         return (
             <div>
-                <Banner title='About Me' />
-                <Content content={content}/>
+                <Banner title={this.props.content.title} />
+                <Content content={this.props.content.items} />
             </div>
         );
     }
 }
 
-export default AboutMe;
+export default Card;
