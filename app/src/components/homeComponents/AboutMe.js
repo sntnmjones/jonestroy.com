@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Banner from './Banner';
 import Content from './Content'
+import AboutMeMd from '../../markdown/aboutMe.md';
+
 
 class AboutMe extends Component {
     constructor() {
@@ -14,7 +16,7 @@ class AboutMe extends Component {
         return (
             <div>
                 <Banner title='About Me' />
-                <Content content={content}/>
+                <Content AboutMeMd={AboutMeMd}/>
             </div>
         );
     }

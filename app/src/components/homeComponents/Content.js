@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import ReactMarkdown from 'react-markdown';
-import AboutMeMd from '../../markdown/aboutMe.md';
 
 class Content extends Component {
     constructor() {
@@ -12,7 +11,7 @@ class Content extends Component {
 
     componentWillMount() {
         // Get the contents from the Markdown file and put them in the React state, so we can reference it in render() below.
-        fetch(AboutMeMd).then(res => res.text()).then(text => this.setState({ markdown: text }));
+        fetch(this.props.AboutMeMd).then(res => res.text()).then(text => this.setState({ markdown: text }));
     }
 
     render() {
