@@ -21,7 +21,9 @@ class Banner extends Component {
                 textAlign: 'center',
                 fontSize: '20px',
                 color: '#f8f9fa',
-            }}>{this.props.title}</div>
+            }}>
+                {this.props.title}
+            </div>
         );
     }
 }

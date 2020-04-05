@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ReactMarkdown from 'react-markdown';
+import Collapsable from './Collapsable';
 
 class Content extends Component {
     constructor() {
@@ -8,14 +8,15 @@ class Content extends Component {
     }
 
     render() {
+        const collabsables = [];
+
+        for (const [index, value] of this.props.content.entries()) {
+            collabsables.push(<Collapsable item={value} />)
+        }
+
         return (
-            <div style={{
-                /* Div */
-                borderLeft: '1px solid black',
-                borderBottom: '1px solid black',
-                borderRight: '1px solid black',
-                padding: '5px',
-            }}>
+            <div>
+                {collabsables}
             </div>
         );
     }
