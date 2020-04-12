@@ -1,0 +1,1 @@
+After making a few Android apps for the crew to use at the sawmill I realized that I genuinely love programming and could see myself doing this professionally. I made the decision to go back to school in 2014 after working at a sawmill for 14 years. I decided to pursue a Bachelor's of Science in Computer Science, which I attained in December 2019!
