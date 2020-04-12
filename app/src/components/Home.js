@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import Navbar from './Navbar'
-import Card from './homeComponents/Card'
+import React, { Component } from 'react';
+import Navbar from './Navbar';
+import Card from './homeComponents/Card';
+import AboutMeMd from '../markdown/aboutMe.md';
 
 class Home extends Component {
     constructor() {
@@ -18,7 +19,7 @@ class Home extends Component {
                 items: [
                     {
                         title: 'Hobbies',
-                        content: 'Cool Hobbies',
+                        content: AboutMeMd,
                         collapse: 'collapse show'
                     },
                     {

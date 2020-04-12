@@ -1,14 +1,23 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import ReactMarkdown from 'react-markdown';
 
 class Collapsable extends Component {
     constructor() {
         super();
-        this.state = {};
+        this.state = {
+            markdown : ''
+        };
+    }
+
+    componentWillMount() {
+        // Get the contents from the Markdown file and put them in the React state, so we can reference it in render() below.
+        fetch(this.props.item.content).then(res => res.text()).then(text => this.setState({ markdown: text }));
     }
 
     render() {
         const id = this.props.item.title;
         const dataTarget = '#' + this.props.item.title;
+        const { markdown } = this.state;
         return (
             <div style={{
                 /* Div */
@@ -31,7 +40,8 @@ class Collapsable extends Component {
 
                         <div id={id} class={this.props.item.collapse} aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
-                                {this.props.item.content}
+                                <ReactMarkdown source={markdown}  />
+                                {/* {this.props.item.content} */}
                             </div>
                         </div>
                     </div>
