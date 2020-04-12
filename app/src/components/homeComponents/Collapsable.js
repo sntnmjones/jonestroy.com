@@ -41,7 +41,6 @@ class Collapsable extends Component {
                         <div id={id} class={this.props.item.collapse} aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                                 <ReactMarkdown source={markdown}  />
-                                {/* {this.props.item.content} */}
                             </div>
                         </div>
                     </div>
